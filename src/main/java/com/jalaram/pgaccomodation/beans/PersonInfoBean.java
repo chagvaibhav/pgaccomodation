@@ -15,6 +15,7 @@ public class PersonInfoBean implements Serializable{
 	String city;
 	String state;
 	String country;
+	
 	public String getFirstName() {
 		return firstName;
 	}

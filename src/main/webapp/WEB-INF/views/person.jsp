@@ -10,10 +10,32 @@
 	<form action="person" method="post">
 		<table>
 			<tr>
-				<td>Person Name :
-				<td><input type="text" name="personName"><br>
+				<td>First Name :</td>
+				<td><input type="text" name="firstName"></td>
+			</tr>
 			<tr>
-				<td><input type="submit" value="Submit">
+				<td>Middle Name :</td>
+				<td><input type="text" name="middleName"></td>
+			</tr>
+			<tr>
+				<td>Last Name :</td>
+				<td><input type="text" name="lastName"></td>
+			</tr>
+			<tr>
+				<td>City :</td>
+				<td><input type="text" name="city"></td>
+			</tr>
+			<tr>
+				<td>State :</td>
+				<td><input type="text" name="state"></td>
+			</tr>
+			<tr>
+				<td>Country :</td>
+				<td><input type="text" name="country"></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Submit"></td>
+			</tr>
 		</table>
 	</form>
 </body>
