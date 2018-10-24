@@ -1,6 +1,13 @@
 package com.jalaram.pgaccomodation.beans;
 
 import java.io.Serializable;
+import java.util.Date;
+
+import javax.validation.constraints.Past;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+import com.jalaram.pgaccomodation.customvalidation.isValidPhone;
 
 public class PersonInfoBean implements Serializable{
 
@@ -9,12 +16,23 @@ public class PersonInfoBean implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	@Pattern(regexp="[^0-9]*")
+	@Size(min=3,max=20)
 	String firstName;
+	
+	@Pattern(regexp="[^0-9]*")
 	String middleName;
+	
+	@Pattern(regexp="[^0-9]*") 
 	String lastName;
-	String city;
-	String state;
-	String country;
+	
+	@isValidPhone
+	String mobile;
+	
+	@Past
+	Date dob;
+	
+	Address address;
 	
 	public String getFirstName() {
 		return firstName;
@@ -34,27 +52,31 @@ public class PersonInfoBean implements Serializable{
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public String getCity() {
-		return city;
+	
+	public String getMobile() {
+		return mobile;
 	}
-	public void setCity(String city) {
-		this.city = city;
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
 	}
-	public String getState() {
-		return state;
+	
+	public Date getDob() {
+		return dob;
 	}
-	public void setState(String state) {
-		this.state = state;
+	public void setDob(Date dob) {
+		this.dob = dob;
 	}
-	public String getCountry() {
-		return country;
+	public Address getAddress() {
+		return address;
 	}
-	public void setCountry(String country) {
-		this.country = country;
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 	@Override
 	public String toString() {
-		return "PersonInfoBean [firstName=" + firstName + ", middleName=" + middleName + ", lastName=" + lastName
-				+ ", city=" + city + ", state=" + state + ", country=" + country + "]";
+		return "PersonInfoBean [firstName=" + firstName + ", middleName="
+				+ middleName + ", lastName=" + lastName + ", mobile=" + mobile
+				+ ", dob=" + dob + ", address=" + address + "]";
 	}
+	
 }
