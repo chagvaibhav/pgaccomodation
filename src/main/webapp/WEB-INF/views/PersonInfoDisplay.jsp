@@ -7,32 +7,45 @@
 <title>Person Information</title>
 </head>
 <body>
+	<h1>${headerMessage}</h1>
 	<h2>Entered Person Information is as follows :</h2>
 	<br>
 	<table>
 		<tr>
-			<td><b>First Name</b></td>
+			<td><b>First Name : </b></td>
 			<td>${personInfo.firstName}</td>
 		</tr>
 		<tr>
-			<td><b>Middle Name</b></td>
+			<td><b>Middle Name : </b></td>
 			<td>${personInfo.middleName}</td>
 		</tr>
 		<tr>
-			<td><b>Last Name</b></td>
+			<td><b>Last Name : </b></td>
 			<td>${personInfo.lastName}</td>
 		</tr>
 		<tr>
-			<td><b>City</b></td>
-			<td>${personInfo.city}</td>
+			<td><b>Date Of Birth : </b></td>
+			<td>${personInfo.dob}</td>
 		</tr>
 		<tr>
-			<td><b>State</b></td>
-			<td>${personInfo.state}</td>
+			<td><b>Mobile : </b></td>
+			<td>${personInfo.mobile}</td>
 		</tr>
 		<tr>
-			<td><b>Country</b></td>
-			<td>${personInfo.country}</td>
+			<td><b>City : </b></td>
+			<td>${personInfo.address.city}</td>
+		</tr>
+		<tr>
+			<td><b>State : </b></td>
+			<td>${personInfo.address.state}</td>
+		</tr>
+		<tr>
+			<td><b>Country: </b></td>
+			<td>${personInfo.address.country}</td>
+		</tr>
+		<tr>
+			<td><b>Pincode : </b></td>
+			<td>${personInfo.address.pincode}</td>
 		</tr>
 	</table>
 </body>
