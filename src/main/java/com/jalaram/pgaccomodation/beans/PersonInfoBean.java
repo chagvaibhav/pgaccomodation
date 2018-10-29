@@ -3,11 +3,11 @@ package com.jalaram.pgaccomodation.beans;
 import java.io.Serializable;
 import java.util.Date;
 
-import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 import com.jalaram.pgaccomodation.customvalidation.isValidPhone;
+
 
 public class PersonInfoBean implements Serializable{
 
@@ -15,7 +15,7 @@ public class PersonInfoBean implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
+
 	@Pattern(regexp="[^0-9]*")
 	@Size(min=3,max=20)
 	String firstName;
@@ -25,11 +25,11 @@ public class PersonInfoBean implements Serializable{
 	
 	@Pattern(regexp="[^0-9]*") 
 	String lastName;
+
 	
 	@isValidPhone
 	String mobile;
-	
-	@Past
+
 	Date dob;
 	
 	Address address;
@@ -52,10 +52,11 @@ public class PersonInfoBean implements Serializable{
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	
+
 	public String getMobile() {
 		return mobile;
 	}
+
 	public void setMobile(String mobile) {
 		this.mobile = mobile;
 	}

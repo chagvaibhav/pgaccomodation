@@ -17,16 +17,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.jalaram.pgaccomodation.beans.PersonInfoBean;
+import com.jalaram.pgaccomodation.beans.PersonNameEditor;
 
 @Controller
 public class RentController {
 
 	@InitBinder
 	public void init(WebDataBinder binder){
-		//binder.setDisallowedFields(new String[]{"mobile"});
+		
+		binder.setDisallowedFields(new String[]{"mobile"});
 		SimpleDateFormat userFormat =new SimpleDateFormat("YYYY-MM-dd");
 		binder.registerCustomEditor(Date.class,"dob", new CustomDateEditor(userFormat, false));
-		//binder.registerCustomEditor(String.class,"firstName",new PersonNameEditor());
+		binder.registerCustomEditor(String.class,"firstName",new PersonNameEditor());
 	}
 
 	@RequestMapping(value ="/" ,method = RequestMethod.GET)

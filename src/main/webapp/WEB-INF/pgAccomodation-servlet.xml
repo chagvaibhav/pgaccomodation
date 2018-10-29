@@ -26,9 +26,9 @@ xsi:schemaLocation="
 			<value>.jsp</value>
 		</property>
 	</bean>
-	
- 	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
-		<property name="basename" value="/WEB-INF/personmessages"></property>
-	</bean> 
-	
+
+	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basename" value="/WEB_INF/personmessages"></property>
+	</bean>
+
 </beans>
