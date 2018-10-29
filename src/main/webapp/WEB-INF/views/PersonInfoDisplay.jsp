@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1" isELIgnored="false"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -12,39 +13,31 @@
 	<br>
 	<table>
 		<tr>
-			<td><b>First Name : </b></td>
-			<td>${personInfo.firstName}</td>
+			<td><b><spring:message code="label.name" /></b></td>
+			<td>${personInfo.name}</td>
 		</tr>
 		<tr>
-			<td><b>Middle Name : </b></td>
-			<td>${personInfo.middleName}</td>
-		</tr>
-		<tr>
-			<td><b>Last Name : </b></td>
-			<td>${personInfo.lastName}</td>
-		</tr>
-		<tr>
-			<td><b>Date Of Birth : </b></td>
+			<td><b><spring:message code="label.dob" /></b></td>
 			<td>${personInfo.dob}</td>
 		</tr>
 		<tr>
-			<td><b>Mobile : </b></td>
+			<td><b><spring:message code="label.mobile" /></b></td>
 			<td>${personInfo.mobile}</td>
 		</tr>
 		<tr>
-			<td><b>City : </b></td>
+			<td><b><spring:message code="label.city" /></b></td>
 			<td>${personInfo.address.city}</td>
 		</tr>
 		<tr>
-			<td><b>State : </b></td>
+			<td><b><spring:message code="label.state" /></b></td>
 			<td>${personInfo.address.state}</td>
 		</tr>
 		<tr>
-			<td><b>Country: </b></td>
+			<td><b><spring:message code="label.country" /></b></td>
 			<td>${personInfo.address.country}</td>
 		</tr>
 		<tr>
-			<td><b>Pincode : </b></td>
+			<td><b><spring:message code="label.pincode" /></b></td>
 			<td>${personInfo.address.pincode}</td>
 		</tr>
 	</table>
